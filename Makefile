@@ -1,7 +1,7 @@
 DEBUG = 0
 FINALPACKAGE = 1
 
-ARCHS = arm64 arm64e
+ARCHS = arm64
 
 # Share the SDK and deployment targets with the PreferenceBundle.
 include AxsNotchHomeFixBuild.mk
