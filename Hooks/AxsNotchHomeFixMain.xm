@@ -39,14 +39,14 @@ static void axs_notchhomefix_setTransitionDepth(id object, NSUInteger depth) {
 }
 
 - (BOOL)_isEffectivelyHome {
-    if (axs_notchhomefix_enabled() && axs_notchhomefix_transitionDepth(self) > 0) {
+    if (axs_notchhomefix_enabled()) {
         return YES;
     }
     return %orig;
 }
 
 - (BOOL)_isIndexZoomAppLayout:(id)layout {
-    if (axs_notchhomefix_enabled() && axs_notchhomefix_transitionDepth(self) > 0) {
+    if (axs_notchhomefix_enabled()) {
         return YES;
     }
     return %orig(layout);
