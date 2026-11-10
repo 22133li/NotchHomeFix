@@ -1,7 +1,7 @@
 Package: com.axs.notchhomefix
 Name: NotchHome Fix
 Version: 5.2.0
-Architecture: iphoneos-arm64e
+Architecture: iphoneos-arm64
 Description: Experimental non-home transition eligibility reimplementation; runtime unverified
 Maintainer: NotchHomeFix Contributors
 Author: Independent reimplementation
