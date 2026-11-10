@@ -44,7 +44,7 @@ jobs:
         run: |
           VERSION="5.2.0-${{ github.run_number }}"
           echo "Using version: $VERSION"
-          sed -i '' "s/^Version: .*/Version: ${VERSION}/" control
+          sed -i "s/^Version: .*/Version: ${VERSION}/" control
           echo "package_version=${VERSION}" >> "$GITHUB_OUTPUT"
 
       - name: Checkout Theos (RootHide)
