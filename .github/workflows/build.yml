@@ -72,9 +72,10 @@ jobs:
       - name: Install Theos dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y clang llvm lld make perl dpkg-dev xz-utils
-          git clone --depth 1 https://github.com/theos/theos.git /tmp/theos-bootstrap
-          /tmp/theos-bootstrap/bin/bootstrap.sh
+          sudo apt-get install -y bash curl sudo clang llvm lld make perl dpkg-dev xz-utils
+          bash -c "\$(curl -fsSL https://raw.githubusercontent.com/theos/theos/master/bin/install-theos)"
+          curl -fsSL https://github.com/ProcursusTeam/ldid/releases/download/v2.1.5-procursus7/ldid_linux_x86_64 -o /usr/local/bin/ldid
+          sudo chmod +x /usr/local/bin/ldid
 
       - name: Build Package
         run: |
